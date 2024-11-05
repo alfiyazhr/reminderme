@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--font);
+}
+
+:root{
+    --warna1: rgb(248, 111, 3);
+    --warna2: rgb(15, 15, 15);
+    --warna3: white;
+    --font: 'Plus Jakarta Sans', sans-serif;
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+
+/* Header Start */
+header{
+    width: 100%;
+    position: fixed;
+}
+
+.navbar{
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky{
+    background-color: var(--warna3);
+    height: 120px;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar h3 a{
+    font-size: 30px;
+    color: var(--warna2);
+}
+
+.navbar h3 a span{
+    color: var(--warna1);
+}
+
+.navbar ul li a{
+    display: inline-block;
+    color: var(--warna2);
+    margin-left: 20px;
+    padding: 3px;
+    position: relative;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.navbar ul li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--warna1);
+    transition: width 0.25s ease-out;
+}
+
+.navbar ul li a:hover::before{
+    width: 100%;
+}
+
+.login{
+    padding: 10px 50px;
+    border-radius: 100px;
+    border: 2px solid var(--warna3);
+    background-color: var(--warna3);
+    color: var(--warna1);
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.login:hover{
+    background-color: var(--warna1);
+    border: 2px solid var(--warna1);
+    color: var(--warna3);
+}
+
+.navbar.sticky .login{
+    border: 2px solid var(--warna1);
+}
+
+.navbar .toggle{
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+
+.navbar .toggle input{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+.shape{
+    margin-bottom: 10px;
+    background-color: black;
+    height: 10px;
+    width: 50px;
+    transition: all 0.2s;
+    border-radius: 50px;
+}
+
+.toggle input:checked ~ .shape:nth-child(2){
+    transform: translateX(10px);
+}
+
+.toggle input:checked ~ .shape:nth-child(4){
+    transform: translateX(-10px);
+}
+/* Header Stop */
+
+
+
+/* Main Start */
+main{
+    width: 100%;
+}
+#display-1{
+    width: 100%;
+    display: grid;
+    grid-template-areas: "content image";
+    grid-template-columns: 1fr 1fr;
+    overflow-x: hidden;
+}
+
+.text-content{
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h3{
+    font-size: 50px;
+    font-weight: bolder;
+    margin: 20px 0;
+}
+
+.content{
+    padding: 0 50px;
+}
+
+.content p{
+    margin: 30px 0;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.content a.tombol{
+    padding: 10px 30px;
+    margin: 10px 0;
+    background-color: var(--warna3);
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 100px;
+    border: 2px solid var(--warna1);
+    transition: 0.3s ease-in-out;
+    color: var(--warna1);
+}
+
+.content a.tombol:hover{
+    color: var(--warna3);
+    background-color: var(--warna1);
+    border: 2px solid var(--warna1);
+}
+
+#display-1 img{
+    grid-area: image;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110%;
+}
+
+#display-2{
+    width: 100%;
+}
+
+.content-wrapper{
+    padding: 100px;
+    text-align: center;
+}
+
+.content-wrapper h3{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.content-wrapper p{
+    font-size: 18px;
+    font-weight: lighter;
+    margin: 30px 0;
+}
+
+#display-3{
+    width: 100%;
+    background-color: black;
+    color: var(--warna3);
+    padding: 100px;
+}
+
+.title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.comment-wrapper{
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 500px));
+    justify-content: center;
+    align-items: center;
+}
+
+.comment{
+    margin: 10px;
+    padding: 10px 30px;
+    background-color: var(--warna3);
+    color: black;
+    border-radius: 10px;
+}
+
+.comment h3{
+    padding: 5px 0;
+    border-bottom: 1px solid black;
+    width: 100px;
+}
+
+.comment p{
+    margin: 10px 0;
+}
+
+.comment i blockquote{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.line{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.line-1, .line-2{
+    background-color: var(--warna3);
+    height: 2px;
+    width: 30%;
+}
+
+
+/* Divider */
+.divider {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 76px;
+}
+
+.divider .shape-fill {
+    fill: #000000;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .divider svg {
+        width: calc(110% + 1.3px);
+        height: 50px;
+    }
+}
+
+/* Divide end */
+
+#display-4{
+    width: 100%;
+}
+
+.container{
+    padding: 50px 100px;
+    display: grid;
+    grid-template-areas: "image content";
+    grid-template-columns: 1fr 1fr;
+}
+
+.container img{
+    width: 80%;
+    grid-area: image;
+}
+
+.text{
+    grid-area: content;
+    padding: 100px 0;
+    display: block;
+    align-items: center;
+}
+
+.text h3{
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+.text p{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.text a.tombol2{
+    padding: 10px 50px;
+    margin: 10px 0;
+    color: var(--warna1);
+    background-color: var(--warna3);
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 100px;
+    border: 2px solid var(--warna1);
+    transition: 0.3s ease-in-out;
+}
+
+.text a.tombol2:hover{
+    color: var(--warna3);
+    background-color: var(--warna1);
+    border: 2px solid var(--warna1);
+}
+
+#display-5{
+    width: 100%;
+}
+
+.title-team{
+    font-size: 30px;
+    text-align: center;
+    font-size: bolder;
+}
+
+.team{
+    padding: 50px 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.card{
+    text-align: center;
+    padding: 20px 20px 50px 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.card img{
+    width: 60%;
+}
+
+.card h3{
+    margin: 5px 0;
+}
+/* Main End */
+
+/* Footer start */
+footer{
+    padding: 50px;
+    width: 100%;
+    background-color: black;
+}
+
+.footer-content{
+    color: var(--warna3);
+    text-align: center;
+}
+/* Footer End */
+
+
+/* Mobile */
+@media screen and (max-width: 750px){
+    .navbar{
+        padding: 0 10px;
+        transition: all 0.1s;
+    }
+
+    .navbar h3 a{
+        font-size: 20px;
+    }
+
+    .navbar .toggle{
+        width: 50px;
+        height: 40px;
+        display: block;
+    }
+
+    .navbar .toggle input{
+        width: 50px;
+        height: 40px;
+    }
+
+    .toggle .shape{
+        width: 40px;
+        height: 5px;
+    }
+
+    .login{
+        display: none;
+    }
+
+    .navbar ul{
+        padding: 20px 0;
+        width: 100%;
+        display: block;
+        background-color: var(--warna3);
+        position: absolute;
+        z-index: -1;
+        margin-top: -220px;
+        margin-left: -10px;
+        transition: all 0.3s;
+    }
+
+    .navbar ul.slide{
+        margin-top: 220px;
+    }
+
+    .navbar.slide{
+        background-color: var(--warna3);
+    }
+
+    #display-1{
+        grid-template-areas: 'image' 'content';
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        overflow-x: hidden;
+    }
+
+    .image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #display-1 img{
+        grid-area: image;
+        width: 60%;
+    }
+    
+    .text-content{
+        grid-area: content;
+    }
+
+    .text-content h3{
+        font-size: 20px;
+    }
+
+    .content{
+        padding: 0 20px;
+    }
+
+    .content-wrapper{
+        padding: 100px 20px;
+    }
+
+    #display-3{
+        padding: 100px 20px;
+    }
+
+    .container{
+        grid-template-areas: "image" "content";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        padding: 100px 20px;
+    }
+
+    .container img{
+        grid-area: image;
+    }
+
+    .text{
+        grid-area: content;
+        padding: 30px 0;
+    }
+
+    .text h3{
+        font-size: 20px;
+    }
+
+    .team{
+        padding: 100px 20px;
+    }
+}
