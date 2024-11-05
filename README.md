@@ -61,12 +61,5 @@ Berikut adalah rincian komponen-komponen yang ada dalam website ReminderMe:
    - Menyimpan data pengguna (Users), jadwal mata kuliah (JadwalKuliah), dan daftar tugas (ToDoList).
    - Menggunakan relasi antara tabel-tabel untuk menghubungkan data pengguna dengan jadwal mata kuliah dan daftar tugas yang sesuai.
 
-## Teknologi yang Digunakan
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: PHP
-- **Database**: phpMyAdmin (MySQL)
 
----
-
-**ReminderMe** membantu mahasiswa menjadi lebih terorganisir, produktif, dan efektif dalam mengelola tugas dan jadwal kuliah mereka. Aplikasi ini dirancang untuk memenuhi kebutuhan mahasiswa modern dengan berbagai fitur yang intuitif dan mudah digunakan.
 
